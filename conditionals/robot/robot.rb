@@ -25,9 +25,8 @@ class Robot
       elsif my_temperature > 100
         return "I am very happy"
       end
-    end
 
-    if date <= 15
+    elsif date <= 15
       if my_temperature > 70 && my_temperature < 101
         "I am sad"
       elsif my_temperature > 70 && my_temperature < 101
@@ -48,13 +47,26 @@ class Robot
   # if that is less than 50 your robots optimal weight is 1000
 
   def optimal_weight(my_weight, my_name)
-    # code goes here
+    if my_name[0] <= j
+      if my_weight - 100 > 30
+        return 300
+      else 
+        return my_weight - 100
+      end
+
+    elsif my_name[0] > j
+      if my_weight + 46 >= 50
+        return 0
+      else 
+        return 1000
+      end
+    end
   end
   
   # your robots optimal height is your arm_length (estimated) multiplied by 50
   # and divided by 7
   def optimal_height(my_arm_length)
-    # code goes here
+    my_arm_length * 50 / 7.0
   end
 
 end
