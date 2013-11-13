@@ -13,7 +13,7 @@ describe "#is_a_teenager?" do
     is_a_teenager?(15).should eq(true)
   end
 
-  it "says 'you can't possibly be that old' if the person is 30 or over" do
+  it "says 'No one would ever mistake you for a teenager.' if the person is 30 or over" do
     is_a_teenager?(30).should eq("No one would ever mistake you for a teenager.")
     is_a_teenager?(35).should eq("No one would ever mistake you for a teenager.")
     is_a_teenager?(30).should_not eq(false)
