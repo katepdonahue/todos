@@ -17,7 +17,25 @@ class Robot
   # a robot should be very miserable if its on or before the 15th AND
   # the temperature is 70 degrees or colder
   def temperature(my_temperature)
-    # code goes here
+    if date > 15
+      if my_temperature > 70 && my_temperature < 101
+        return "I am happy"
+      elsif my_temperature < 71
+        return "I am miserable"
+      elsif my_temperature > 100
+        return "I am very happy"
+      end
+    end
+
+    if date <= 15
+      if my_temperature > 70 && my_temperature < 101
+        "I am sad"
+      elsif my_temperature > 70 && my_temperature < 101
+        "I am very sad"
+      elsif my_temperature > 70 && my_temperature < 101
+        "I am very miserable"
+      end
+    end
   end
 
   # if your name begins with the letters a-j
