@@ -1,6 +1,10 @@
-puts "What is your birthday? (mm/dd)"
+require 'active_support/core_ext/integer/inflections'
+
+puts "What is your birthday? (mm/dd/yyyy)"
 birthday = gets.chomp
 today = Time.now.strftime("%m/%d")
-if birthday == today
-  puts "Happy Birthday!"
+today_year = Time.now.strftime("%Y")
+how_old = today_year.to_i - birthday[6..9].to_i
+if birthday[0..4] == today
+  puts "Happy #{how_old.ordinalize} Birthday!"
 end
