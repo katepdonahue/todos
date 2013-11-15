@@ -5,7 +5,8 @@ class String
   def count_sentences
     periods = self.count(".")
     questions = self.count("?")
-    sentences = periods + questions
+    exclamations = self.count("!")
+    sentences = periods + questions + exclamations
   end
 end
 
