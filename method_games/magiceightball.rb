@@ -8,7 +8,7 @@
 #If the user answers yes, have it give a random message.
 #If the user says no, have it end.
 
-answers = ["yes", 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+answers = ["yes", "no", "If you want it to be so", "I am not at liberty to say", "I wish I knew", "My icosahedral die does not have enough sides to answer your question", "no way", "not a chance", "a definite yes", "for sure", "not in this world", "if the president says so", "I'm really not sure on this one", "try again later", "if you have to ask, then no", "yes, yes, a thousand times yes", "signs point to yes", "yeaaaaaah", "hell yes", "hell no"]
 
 puts "Do you want to shake the magic eight ball? (y or n)"
 user = gets.chomp
