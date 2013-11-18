@@ -17,4 +17,10 @@ describe "#fizzbuzz" do
   it "should return the integer when it is not divisible by 3 or 5" do
     expect(fizzbuzz(13)).to eq(13)
   end
+
+  it "should raise an error if method called on a non-integer value" do
+    expect {fizzbuzz("poop")}.to raise_error
+    expect {fizzbuzz([2, 4])}.to raise_error
+    expect {fizzbuzz({:sym => value})}.to raise_error
+  end
 end
