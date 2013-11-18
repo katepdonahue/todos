@@ -28,6 +28,7 @@ pigeon_data = {
 # Your output should match the hash below:
 
 pigeon_list = {}
+
 pigeon_data.each do |attr_category, hash|
   hash.each do |subcategory, name_array|
     name_array.each do |name|
@@ -38,11 +39,6 @@ end
 
 pigeon_list.each do |name, empty_hash|
   empty_hash[:color] = []
-  # if name.include? pigeon_data[:gender][:male]
-  #   empty_hash[:gender] = "male"
-  # else
-  #   empty_hash[:gender] = "female"
-  # end
 end
 
 
