@@ -2,7 +2,7 @@ require "./yahtzee"
 
 describe "#roll_dice" do
   it "should return an array with 5 non-nil elements" do
-    expect(roll_dice.compact.length).to eq(5)
+    expect(roll_dice.compact).to have(5).items
   end
   it "should return an array with 5 elements, each a number between 1 and 6 (inclusive)" do
     # this test could pass if array has a nil elt and a two digit elt even though your code would be wrong
