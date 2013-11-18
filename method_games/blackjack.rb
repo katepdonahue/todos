@@ -22,10 +22,10 @@ def hit?(an_array, index)
   hit_or_not = gets.chomp
   if hit_or_not == "s"
     puts "Cool."
-    an_array[index] = 0
-    puts total(an_array)
+    an_array << 0
+    puts "Your total is #{total(an_array)}."
   elsif hit_or_not == "h"
-    an_array[index] = rand(1..11)
+    an_array << rand(1..11)
     puts "Your card is #{an_array[index]}"
     puts "Your total is #{total(an_array)}."
   else
@@ -34,11 +34,11 @@ def hit?(an_array, index)
 end
 
 puts "Welcome to Blackjack."
-cards = [ rand(1..11), rand(1..11), nil , nil]
+cards = [ rand(1..11), rand(1..11)]
 num_cards = 2
 puts "Your two cards are #{cards[0]} and #{cards[1]}."
 puts "Your total is #{total(cards)}."
-while cards[3] == nil && cards[2] != 0
+until (cards.include? 0) || (total(cards) >= 21)
   hit?(cards, num_cards)
   num_cards += 1
 end
