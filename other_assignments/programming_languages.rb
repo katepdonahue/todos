@@ -57,10 +57,5 @@ languages.each do |style, lang_hash|
   end
 end
 
-# new_languages.each do |lang, empty_hash|
-#   empty_hash[:style] = []
-#   empty_hash[:type] = []
-# end
-
 puts new_languages
  
