@@ -14,13 +14,19 @@ class Array
     new_array
   end
 
-  def
-
   def my_select
     # iterates through an array
     # checks if the statment in the block is true for each element of the array
     # drops the element if the condition is not met
     # returns the manipulated array
+    return self.to_enum unless block_given?
+    i = 0
+    new_array = []
+    while i < self.length
+      new_array << self[i] if (yield self[i])
+      i += 1
+    end
+    new_array
   end
 end
 
