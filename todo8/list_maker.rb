@@ -1,9 +1,5 @@
 class Array
   def make_list
-    number = 0
-    self.collect do |element|
-      number += 1
-      "#{number}. #{element}"
-    end
+    each_with_index.map { |element, index|  "#{index + 1}. #{element}" }
   end
 end
