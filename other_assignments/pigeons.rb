@@ -27,40 +27,64 @@ pigeon_data = {
 # as the key of a new hash where each name holds the attributes for that bird. 
 # Your output should match the hash below:
 
+# pigeon_list = {}
+
+# pigeon_data.each do |attr_category, hash|
+#   hash.each do |subcategory, name_array|
+#     name_array.each do |name|
+#       pigeon_list[name] = {}
+#     end
+#   end
+# end
+
+# pigeon_list.each do |name, empty_hash|
+#   empty_hash[:color] = []
+# end
+
+
+# pigeon_data[:color].each do |color, name_array|
+#   name_array.each do |name|
+#     pigeon_list[name][:color] << color.to_s
+#   end
+# end
+
+# pigeon_data[:gender].each do |gender, name_array|
+#   name_array.each do |name|
+#     pigeon_list[name][:gender] = gender.to_s
+#   end
+# end
+
+# pigeon_data[:lives].each do |location, name_array|
+#   name_array.each do |name|
+#     pigeon_list[name][:lives] = location
+#   end
+# end
+
+
+
+# puts pigeon_list
+
+# refactor using style from programming_languages.rb
+
 pigeon_list = {}
 
 pigeon_data.each do |attr_category, hash|
-  hash.each do |subcategory, name_array|
+  hash.each do |spec_attr, name_array|
     name_array.each do |name|
-      pigeon_list[name] = {}
+      pigeon_list[name] ||= {}
+      if attr_category == :color
+        pigeon_list[name][:color] ||= []
+        pigeon_list[name][:color] << spec_attr.to_s
+      end
+      if attr_category == :gender
+        pigeon_list[name][:gender] = spec_attr.to_s
+      end
+      if attr_category == :lives
+        pigeon_list[name][:lives] = spec_attr
+      end
     end
   end
 end
-
-pigeon_list.each do |name, empty_hash|
-  empty_hash[:color] = []
-end
-
-
-pigeon_data[:color].each do |color, name_array|
-  name_array.each do |name|
-    pigeon_list[name][:color] << color.to_s
-  end
-end
-
-pigeon_data[:gender].each do |gender, name_array|
-  name_array.each do |name|
-    pigeon_list[name][:gender] = gender.to_s
-  end
-end
-
-pigeon_data[:lives].each do |location, name_array|
-  name_array.each do |name|
-    pigeon_list[name][:lives] = location
-  end
-end
-
-
 
 puts pigeon_list
  
