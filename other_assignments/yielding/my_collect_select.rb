@@ -4,14 +4,14 @@ class Array
     # does whatever you ask for each of the elements in the array
     # yield to the block with each element in the array
     # returns the array after the effects of the block
-    # return self.to_enum unless block_given?
-    # i = 0
-    # new_array = []
-    # while i < self.length
-    #   new_array << (yield self[i])
-    #   i += 1
-    # end
-    # new_array
+    return self.to_enum unless block_given?
+    i = 0
+    new_array = []
+    while i < self.length
+      new_array << (yield self[i])
+      i += 1
+    end
+    new_array
   end
 
   def
