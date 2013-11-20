@@ -3,6 +3,7 @@ def my_each(array)
   # does whatever you ask for each of the elements in the array
   # yield to the block with each element in the array
   # returns the original array
+  return array.to_enum unless block_given?
   i = 0
   while i < array.length
     yield array[i]
