@@ -10,10 +10,11 @@ describe Deli do
     end
   end
 
-  # describe "#attr_writer" do
-  #   it "should alter @line when you call line = new_line" do
-  #   end
-  # end
+  describe "#attr_writer" do
+    it "should alter @line when you call line(new_line)" do
+      expect(new_deli.line(["Kate"])).to eq(["Kate"])
+    end
+  end
 
   # describe "#take_a_number" do
   #   it "should take a customer's name, append their number to their name and add them to the line."
