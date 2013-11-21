@@ -12,14 +12,15 @@ describe Deli do
 
   describe "#attr_writer" do
     it "should alter @line when you call line(new_line)" do
-      expect(new_deli.line=(["Kate"])).to eq(["Kate"])
+      expect(new_deli.line=(["1. Kate", "2. Nobody"])).to eq(["1. Kate", "2. Nobody"])
     end
   end
 
-  # describe "#take_a_number" do
-  #   it "should take a customer's name, append their number to their name and add them to the line."
-  #   end  
-  # end
+  describe "#take_a_number" do
+    it "should take a customer's name, append their number to their name and add them to the line." do
+      expect(new_deli.take_a_number("Flicky")).to eq(["1. Kate", "2. Nobody", "3. Flicky"])
+    end  
+  end
 
   # describe "#now_serving" do
   # end
