@@ -5,6 +5,10 @@ class Deli
     @line = []
   end
 
+  def take_a_number(name)
+    line << "#{line.length + 1}. #{name}"
+  end
+
 end
 
 new_deli = Deli.new
