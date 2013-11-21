@@ -12,7 +12,7 @@ describe Deli do
 
   describe "#attr_writer" do
     it "should alter @line when you call line(new_line)" do
-      expect(new_deli.line(["Kate"])).to eq(["Kate"])
+      expect(new_deli.line=(["Kate"])).to eq(["Kate"])
     end
   end
 
