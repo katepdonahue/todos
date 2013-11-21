@@ -28,6 +28,9 @@ describe Deli do
     end  
   end
 
-  # describe "#now_serving" do
-  # end
+  describe "#now_serving" do
+    it "should remove the customer who is first in line and return their name." do
+      expect(new_deli.now_serving).to eq("Kate")
+    end
+  end
 end
