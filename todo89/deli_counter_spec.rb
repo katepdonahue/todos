@@ -4,6 +4,12 @@ new_deli = Deli.new
 
 describe Deli do
 
+  describe "#initialize" do
+    it "should create an instance of the class when you call new on the class" do
+      expect(Deli.new).to_not be_nil
+    end
+  end
+
   describe "#attr_reader" do
     it "should return @line when you call line" do
       expect(new_deli.line).to eq([])
