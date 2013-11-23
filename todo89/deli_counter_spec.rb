@@ -22,15 +22,16 @@ describe Deli do
     end
   end
 
-  describe "#take_a_number" do
-    it "should take a customer's name, append their number to their name and add them to the line." do
-      expect(new_deli.take_a_number("Flicky")).to eq(["1. Kate", "2. Nobody", "3. Flicky"])
-    end  
-  end
-
   describe "#now_serving" do
     it "should remove the customer who is first in line and return their name." do
       expect(new_deli.now_serving).to eq("Kate")
     end
   end
+
+    describe "#take_a_number" do
+    it "should take a customer's name, append their number to their name and add them to the line." do
+      expect(new_deli.take_a_number("Flicky")).to eq(["1. Kate", "2. Nobody", "3. Flicky"])
+    end  
+  end
+
 end
