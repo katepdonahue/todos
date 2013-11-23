@@ -28,9 +28,10 @@ describe Deli do
     end
   end
 
-    describe "#take_a_number" do
+  describe "#take_a_number" do
     it "should take a customer's name, append their number to their name and add them to the line." do
-      expect(new_deli.take_a_number("Flicky")).to eq(["1. Kate", "2. Nobody", "3. Flicky"])
+      expect(new_deli.take_a_number("Flicky")).to eq(["2. Nobody", "3. Flicky"])
+      expect(Deli.new.take_a_number("Flicky")).to eq(["1. Flicky"])
     end  
   end
 
