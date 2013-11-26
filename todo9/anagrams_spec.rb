@@ -25,7 +25,7 @@ end
  
 require_relative './anagrams'
  
-describe '#anagrams' do 
+describe 'Anagram' do 
   it 'should detect no matches' do
     detector = Anagram.new('diaper')
     detector.match(%w(hello world zombies pants)).should eq([])
