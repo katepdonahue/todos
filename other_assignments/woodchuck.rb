@@ -20,6 +20,8 @@ class Woodchuck
  
 end
 
+total = 0
+
 rand(100).times do 
   Woodchuck.new
 end
@@ -27,7 +29,11 @@ end
 Woodchuck::WOODCHUCKS.each do |woodchuck|
   rand(100).times do
     woodchuck.chuck_wood
+    total += 1
   end
 end
+
+
  
 p Woodchuck::WOODCHUCKS
+p total
