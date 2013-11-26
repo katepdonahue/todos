@@ -3,9 +3,7 @@
 def key_for_min_value(hash)
   smallest = hash[hash.keys.sample]
   hash.each do |key, val|
-    if val < smallest
-      smallest = val
-    end
+      smallest = val if val < smallest
   end
   hash.key(smallest)
 end

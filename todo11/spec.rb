@@ -1,16 +1,18 @@
 require "./key_min_val"
  
-describe "smallest hash value" do
-  it "should return the key of the smallest hash value" do
-    key_for_min_value({:blake => 500, :ashley => 2, :adam => 1}).should eq(:adam)
+describe "#key_for_min_value" do
+
+  it "should return the key of the hash with the smallest value" do
+    expect(key_for_min_value({nisha: 2, kate: orange, gus: 4, chris: 3})).to eq(:nisha)
   end
- 
-  it "should return the key of the smallest hash value example 2" do
-    key_for_min_value({:blake => 10, :ashley => 50, :adam => 17}).should eq(:blake)
+
+  it "should return the last smallest key if there is a tie in smallest values" do
+    expect(key_for_min_value({nisha: 2, kate: orange, gus: 2, chris: 3})).to eq(:gus)
   end
- 
-  it "should return nil for an empty hash" do
-    key_for_min_value({}).should eq(nil)
+
+  it "should return nil if an empty hash is passed to it" do
+    expect(key_for_min_value({})).to be_nil
   end
- 
+
 end
+ 
