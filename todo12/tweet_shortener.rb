@@ -20,7 +20,7 @@ def tweet_shorten(string, hash)
       word_array << word
     end
   end
-  word_array.join
+  truncate(word_array.join)
 end
 
 def print_tweets(array, hash)
