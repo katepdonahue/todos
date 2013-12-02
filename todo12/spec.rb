@@ -32,9 +32,14 @@ describe "#print_tweets" do
   end
 end
 
-# "to, two, too" become '2' 
-# "for, four" become '4'
-# 'be' becomes 'b'
-# 'you' becomes 'u'
-# "at" becomes "@" 
-# "and" becomes "&"
+describe "#shorten" do
+  it "should return non-abbreviated tweet if tweet is less than 140 characters" do
+    string1 = "Hello to you too and I have two tweets for you four. Be cool at 10."
+    expect(shorten(string1, words)).to eq(string1)
+  end
+  it "should return abbreviated tweet if tweet is more than 140 characters" do
+    string1 = "Hello to you too and I have two tweets for you four. Be cool at 10. Hello to you too and I have two tweets for you four. Be cool at 10. Be cool at 11 too."
+    string2 = "Hello 2 u 2 & I have 2 tweets 4 u 4. b cool @ 10. Hello 2 u 2 & I have 2 tweets 4 u 4. b cool @ 10. b cool @ 11 2."
+    expect(shorten(string1, words)).to eq(string2)
+  end
+end
