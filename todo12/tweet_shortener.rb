@@ -23,3 +23,8 @@ def sub_char(string, hash)
   word_array.join
 end
 
+def print_tweets(array, words)
+  array.map do |tweet|
+    sub_char(tweet, words)
+  end
+end
