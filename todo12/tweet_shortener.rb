@@ -30,5 +30,9 @@ def print_tweets(array, hash)
 end
 
 def shorten(string, hash)
-  
+  if string.scan(/./).count > 140
+    sub_char(string, hash) 
+  else
+    string
+  end
 end
