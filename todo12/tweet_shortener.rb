@@ -14,7 +14,7 @@ words = {
 def sub_char(string, hash)
   word_array = []
   string.split(/(?<=)\b/).each do |word|
-    if hash.keys.include? word.downcase
+    if shorten?(string) && (hash.keys.include? word.downcase)
       word_array << hash[word.downcase]
     else
       word_array << word
@@ -29,10 +29,15 @@ def print_tweets(array, hash)
   end
 end
 
-def shorten(string, hash)
+def shorten?(string)
   if string.scan(/./).count > 140
-    sub_char(string, hash) 
+    true
   else
-    string
+    false
   end
 end
+
+# def truncate(string, hash)
+#   if shorten(string, hash)..scan(/./).count > 140
+# end
+# end
