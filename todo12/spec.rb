@@ -12,11 +12,11 @@ words = {
 "and" => "&"
 }
 
-describe "#sub_char" do
+describe "#tweet_shorten" do
   it "should substitute the correct character for substitutable words" do
     string1 = "Hello to you too and I have two tweets for you four. Be cool at 10. Hello to you too and I have two tweets for you four. Be cool at 10. Be cool at 11 too."
     string2 = "Hello 2 u 2 & I have 2 tweets 4 u 4. b cool @ 10. Hello 2 u 2 & I have 2 tweets 4 u 4. b cool @ 10. b cool @ 11 2."
-    expect(sub_char(string1, words)).to eq(string2)
+    expect(tweet_shorten(string1, words)).to eq(string2)
   end
 end
 
@@ -40,5 +40,13 @@ describe "#shorten?" do
   it "should return true if tweet is more than 140 characters" do
     string1 = "Hello to you too and I have two tweets for you four. Be cool at 10. Hello to you too and I have two tweets for you four. Be cool at 10. Be cool at 11 too."
     expect(shorten?(string1)).to be_true
+  end
+end
+
+describe "#truncate" do
+  it "should truncate the string at 140 characters if it is longer than that" do
+    string1 = "Hello to you too and I have two tweets for you four. Be cool at 10. Hello to you too and I have two tweets for you four. Be cool at 10. Be cool at 11 too."
+    string2 = "Hello to you too and I have two tweets for you four. Be cool at 10. Hello to you too and I have two tweets for you four. Be cool at 10. Be c"
+    expect(truncate(string1)).to eq(string2)
   end
 end

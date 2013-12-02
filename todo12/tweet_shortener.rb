@@ -11,7 +11,7 @@ words = {
 "and" => "&"
 }
 
-def sub_char(string, hash)
+def tweet_shorten(string, hash)
   word_array = []
   string.split(/(?<=)\b/).each do |word|
     if shorten?(string) && (hash.keys.include? word.downcase)
@@ -37,7 +37,10 @@ def shorten?(string)
   end
 end
 
-# def truncate(string, hash)
-#   if shorten(string, hash)..scan(/./).count > 140
-# end
-# end
+def truncate(abbr_string)
+  if shorten?(abbr_string)
+    abbr_string.split("")[0..139].join
+  else
+    abbr_string
+  end
+end
