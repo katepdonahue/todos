@@ -54,7 +54,7 @@ version_sorted_filenames = [
 
 describe "#version_sort" do
   it "should sort the files by version number" do
-    expect(version_sort(filenames)).to eq(version_sorted_filenames)
+    expect(filenames.version_sort).to eq(version_sorted_filenames)
   end
 end
 
