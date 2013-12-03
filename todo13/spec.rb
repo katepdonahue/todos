@@ -57,3 +57,6 @@ describe "#version_sort" do
     expect(version_sort(filenames)).to eq(version_sorted_filenames)
   end
 end
+
+# What if some have different file extension? What if there are files in there that are not foo files?
+# (sort alphabetically first)
