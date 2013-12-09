@@ -2,12 +2,9 @@ class Array
 
   def my_count
     hash = Hash.new
-    self.each do |elt|
-      if hash[elt]
-        hash[elt] += 1
-      else
-        hash[elt] = 1
-      end
+    each do |elt|
+      hash[elt] ||= 0
+      hash[elt] += 1
     end
     hash
   end
