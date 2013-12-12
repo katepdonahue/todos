@@ -6,13 +6,13 @@ class String
     title = []
     self.split.each do |word|
       small_word = ["and", "a", "the"]
-      if small_word.include? word
+      if (small_word.include? word) && (self[0] != word)
         title << word.downcase
       else
         title << word.capitalize
       end
     end
-    title.join.capitalize
+    title.join(" ")
   end
 
 end
