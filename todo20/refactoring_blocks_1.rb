@@ -22,7 +22,10 @@
 # NOTE: This code will only work with the rake tests, which will define the order and current_user
 # you will not be able to run this code outside of the test
  
- 
+def pay_by(order)
+  yield
+end 
+
 def pay_by_visa(order,ccn)
   order.compute_cost
   order.compute_shipping
