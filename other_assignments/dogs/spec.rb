@@ -147,4 +147,10 @@ describe Dog do
       expect(dog1.attributes).to eq("Name: Salad  Color: Black  ID: none")
     end
   end
+
+  describe "#reload" do
+    it "should empty the dogs table" do
+      expect(Dog.reload.first).to be_nil
+    end
+  end
 end

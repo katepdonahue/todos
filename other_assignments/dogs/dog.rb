@@ -94,6 +94,10 @@ class Dog
       "Name: #{self.name}  Color: #{self.color}  ID: none"
     end
   end
+
+  def self.reload
+
+  end
  
 end
  
