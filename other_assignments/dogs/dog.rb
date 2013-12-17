@@ -25,10 +25,12 @@ class Dog
 
   def insert
     self.db.query("INSERT INTO dogs (name, color) VALUE ('#{self.name}', '#{self.color}');")
+    Dog.find_by_name(self.name)
   end
 
   def update
     self.db.query("UPDATE dogs SET name = '#{self.name}', color = '#{self.color}' WHERE id = #{self.id};")
+    Dog.find_by_name(self.name)
   end
 
   def self.row_to_obj(row)
@@ -55,6 +57,12 @@ class Dog
   def delete
     self.db.query("DELETE FROM dogs WHERE id = #{self.id};")
   end
+
+  def saved?
+  end
+
+  def save!
+  end
  
 end
  
@@ -68,7 +76,7 @@ end
   # delete/destroy
  
   # refactorings?
-  # new_from_db?
+  # new_from_db
   # saved?
   # save! (a smart method that knows the right thing to do)
   # unsaved?
