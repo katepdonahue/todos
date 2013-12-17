@@ -71,11 +71,9 @@ describe Dog do
 
   describe "#delete" do
     it "should delete the dog from the database" do
-      dog1 = Dog.new("Pasta Batman", "Gray")
-      dog1.insert
-      dog2 = Dog.find_by_name("Pasta Batman") #so it gets an id
-      dog2.delete
-      sql_query = "SELECT * FROM dogs WHERE id = #{dog2.id}"
+      dog1 = Dog.new("Pasta Batman", "Gray").insert
+      dog1.delete
+      sql_query = "SELECT * FROM dogs WHERE id = #{dog1.id}"
       expect(Dog.db.query(sql_query).first).to be_nil
     end
   end
