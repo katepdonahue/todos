@@ -15,8 +15,23 @@ class Dog
     @color = color
   end
 
+  def insert
+    self.db.query("INSERT INTO dogs (name, color) VALUE ('#{self.name}', '#{self.color}');")
+  end
+
+  def update
+    self.db.query("UPDATE dogs (name, color) SET name = '#{self.name}', color = '#{self.color}' WHERE id = #{self.id};")
+  end
+
   def self.find(id)
-    db.query("SELECT * FROM dogs WHERE dogs.id = #{id};")
+    dog = db.query("SELECT * FROM dogs WHERE dogs.id = #{id};").first
+    Dog.new(dog["name"], dog["color"])
+  end
+
+  def self.find_by_name(name)
+  end
+
+  def self.find_by_color(color)
   end
 
   def db
@@ -29,7 +44,11 @@ class Dog
  
 end
  
-dog1 = Dog.new("Spot", "Gray") 
+dog1 = Dog.new("Spot", "Gray")
+dog1.insert
+debugger
+dog1.name = "Pie"
+dog1.update
 dog2 = Dog.find(1)
 debugger
 puts 'hi'
