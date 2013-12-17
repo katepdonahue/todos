@@ -3,7 +3,10 @@
 class Array
  
   def uniq
-    # code goes here
+    self.each do |elt|
+      if array.count(elt)
+        
+    end
   end
  
 end
