@@ -15,6 +15,14 @@ class Dog
     @color = color
   end
 
+  def db
+    @@db
+  end
+
+  def self.db
+    @@db
+  end
+
   def insert
     self.db.query("INSERT INTO dogs (name, color) VALUE ('#{self.name}', '#{self.color}');")
   end
@@ -44,24 +52,12 @@ class Dog
     row_to_obj(dog_row)
   end
 
-  def db
-    @@db
-  end
+  def delete
 
-  def self.db
-    @@db
   end
  
 end
  
-# dog1 = Dog.new("Spot", "Gray")
-# dog1.insert
-# debugger
-# dog1.name = "Pie"
-# dog1.update
-# dog2 = Dog.find(1)
-# debugger
-# puts 'hi'
  
   # color, name, id
   # db

@@ -70,5 +70,13 @@ describe Dog do
     end
   end
 
+  describe "#delete" do
+    it "should delete the dog from the database" do
+      dog1 = Dog.find(1)
+      dog1.delete
+      expect(Dog.find(1).id).to be_nil
+    end
+  end
+
 
 end
