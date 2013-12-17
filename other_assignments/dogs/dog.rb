@@ -6,12 +6,16 @@
 require 'mysql2'
  
 class Dog
-  attr_accessor :name, :color
+  attr_accessor :name, :color, :id
   @@db = Mysql2::Client.new(:host => "localhost", :username => "root", :database => "dogs")
 
   def initialize(name, color)
     @name = name
     @color = color
+  end
+
+  def find
+
   end
  
 end
