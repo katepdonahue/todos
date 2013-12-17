@@ -102,8 +102,8 @@ describe Dog do
       expect(Dog.db.query(sql_command).first).to eq(row_hash)
     end
     it "should update a dog object in the database if it is already there" do
-      Dog.new("Unicorn", "Blue").insert
-      dog1 = Dog.new("Unicorn", "Pink")
+      dog1 = Dog.new("Unicorn", "Blue").insert
+      dog1.color = "Pink"
       dog1.save!
       dog2 = Dog.find_by_name("Unicorn")
       sql_command = "SELECT * FROM dogs WHERE id = '#{dog2.id}';"
