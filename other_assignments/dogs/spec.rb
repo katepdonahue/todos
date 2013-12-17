@@ -112,4 +112,17 @@ describe Dog do
     end
   end
 
+  describe "#==" do
+    it "should check if two dogs are the same by comparing their ids" do
+      dog1 = Dog.new("Corn", "Blue").insert
+      dog1.color = "White"
+      dog2 = dog1.update
+      expect(dog1 == dog2).to be_true
+    end
+    it "should check if two dogs are the same by comparing their ids" do
+      dog1 = Dog.new("Corn", "Blue").insert
+      dog2 = Dog.new("Corn", "Blue").insert
+      expect(dog1 == dog2).to be_false
+    end
+  end
 end
