@@ -86,12 +86,14 @@ class Dog
       "Woof! My name is #{self.name}. Pet my shiny #{self.color} coat! Please! I'm not in the database yet!"
     end
   end
+
+  def attributes
+  end
  
 end
  
  
  
   # new_from_db
-  # inspect
   # reload
   # attributes

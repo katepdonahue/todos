@@ -136,4 +136,15 @@ describe Dog do
       expect(dog1.inspect).to eq("Woof! My name is Salad. Pet my shiny Black coat! Please! I'm not in the database yet!")
     end
   end
+
+  describe "#inspect" do
+    it "should return the dog's attributes" do
+      dog1 = Dog.new("Salad", "Black").insert
+      expect(dog1.attributes).to eq("Name: Salad  Color: Black  ID: #{dog1.id}")
+    end
+    it "should return our own string instead of ruby's built in inspect method" do
+      dog1 = Dog.new("Salad", "Black")
+      expect(dog1.attributes).to eq("Name: Salad  Color: Black  ID: none")
+    end
+  end
 end
