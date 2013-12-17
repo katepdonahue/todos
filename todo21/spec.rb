@@ -1,4 +1,4 @@
-# require './unique'
+require './unique'
 
 describe Array, "#uniq" do
 
