@@ -24,7 +24,7 @@ class Dog
   end
 
   def self.find(id)
-    dog = db.query("SELECT * FROM dogs WHERE dogs.id = #{id};").first
+    dog = self.db.query("SELECT * FROM dogs WHERE dogs.id = #{id};").first
     dog1 = Dog.new(dog["name"], dog["color"])
     dog1.id = id
     dog1
