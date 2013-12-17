@@ -23,14 +23,19 @@ class Dog
     @@db
   end
 
+  def mark_saved!
+    self.id = self.db.last_id
+    self
+  end
+
   def insert
     self.db.query("INSERT INTO dogs (name, color) VALUE ('#{self.name}', '#{self.color}');")
-    Dog.find_by_name(self.name)
+    mark_saved!
   end
 
   def update
     self.db.query("UPDATE dogs SET name = '#{self.name}', color = '#{self.color}' WHERE id = #{self.id};")
-    Dog.find_by_name(self.name)
+    mark_saved!
   end
 
   def self.row_to_obj(row)
@@ -62,6 +67,10 @@ class Dog
     self.id
   end
 
+  def unsaved?
+    !saved?
+  end
+
   def save!
     saved? ? update : insert
   end
@@ -74,12 +83,7 @@ end
  
  
  
-  # refactorings?
   # new_from_db
-  # saved?
-  # save! (a smart method that knows the right thing to do)
-  # unsaved?
-  # mark_saved!
   # ==
   # inspect
   # reload
