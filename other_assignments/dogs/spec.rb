@@ -125,4 +125,15 @@ describe Dog do
       expect(dog1 == dog2).to be_false
     end
   end
+
+  describe "#inspect" do
+    it "should return our own string instead of ruby's built in inspect method" do
+      dog1 = Dog.new("Salad", "Black").insert
+      expect(dog1.inspect).to eq("Woof! My name is Salad. Pet my shiny black coat! Please! My id is #{dog1.id}")
+    end
+    it "should return our own string instead of ruby's built in inspect method" do
+      dog1 = Dog.new("Salad", "Black")
+      expect(dog1.inspect).to eq("Woof! My name is Salad. Pet my shiny black coat! Please! I'm not in the database yet!")
+    end
+  end
 end

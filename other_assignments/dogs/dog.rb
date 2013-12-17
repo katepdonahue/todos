@@ -78,13 +78,16 @@ class Dog
   def ==(other_dog)
     self.id == other_dog.id
   end
+
+  def inspect
+    
+  end
  
 end
  
  
  
   # new_from_db
-  # ==
   # inspect
   # reload
   # attributes
