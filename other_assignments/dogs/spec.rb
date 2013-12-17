@@ -91,8 +91,7 @@ describe Dog do
 
   describe "#save!" do
     it "should insert a dog object into the database if it's not already there" do
-      dog1 = Dog.new("Curly", "Brown")
-      dog1.save!
+      dog1 = Dog.new("Curly", "Brown").save!
       dog2 = Dog.find_by_name("Curly")
       sql_command = "SELECT * FROM dogs WHERE id = '#{dog2.id}';"
       row_hash = {"id" => dog2.id, "name" => "Curly", "color" => "Brown"}
