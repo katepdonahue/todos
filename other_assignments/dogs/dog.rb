@@ -45,14 +45,14 @@ class Dog
  
 end
  
-dog1 = Dog.new("Spot", "Gray")
-dog1.insert
-debugger
-dog1.name = "Pie"
-dog1.update
-dog2 = Dog.find(1)
-debugger
-puts 'hi'
+# dog1 = Dog.new("Spot", "Gray")
+# dog1.insert
+# debugger
+# dog1.name = "Pie"
+# dog1.update
+# dog2 = Dog.find(1)
+# debugger
+# puts 'hi'
  
   # color, name, id
   # db
