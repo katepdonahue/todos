@@ -96,7 +96,12 @@ class Dog
   end
 
   def self.reload
-
+    db.query("DROP TABLE dogs")
+    db.query("CREATE TABLE dogs
+    (id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name TEXT,
+    color TEXT);")
+    db.query("SELECT * FROM dogs")
   end
  
 end
