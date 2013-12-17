@@ -20,14 +20,14 @@ class Dog
   end
 
   def update
-    self.db.query("UPDATE dogs (name, color) SET name = '#{self.name}', color = '#{self.color}' WHERE id = #{self.id};")
+    self.db.query("UPDATE dogs SET name = '#{self.name}', color = '#{self.color}' WHERE id = #{self.id};")
   end
 
   def self.find(id)
-    dog = self.db.query("SELECT * FROM dogs WHERE dogs.id = #{id};").first
-    dog1 = Dog.new(dog["name"], dog["color"])
-    dog1.id = id
-    dog1
+    dog_row = self.db.query("SELECT * FROM dogs WHERE dogs.id = #{id};").first
+    dog_obj = Dog.new(dog_row["name"], dog_row["color"])
+    dog_obj.id = id
+    dog_obj
   end
 
   def self.find_by_name(name)
