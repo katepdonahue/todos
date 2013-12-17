@@ -63,11 +63,7 @@ class Dog
   end
 
   def save!
-    if saved?
-      update
-    else
-      insert
-    end
+    saved? ? update : insert
   end
  
 end
