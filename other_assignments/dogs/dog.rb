@@ -31,7 +31,10 @@ class Dog
   end
 
   def self.find_by_name(name)
-    
+    dog_row = self.db.query("SELECT * FROM dogs WHERE dogs.name = '#{name}';").first
+    dog_obj = Dog.new(dog_row["name"], dog_row["color"])
+    dog_obj.id = dog_row["id"]
+    dog_obj
   end
 
   def self.find_by_color(color)
