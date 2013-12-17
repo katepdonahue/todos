@@ -14,8 +14,15 @@ describe Dog do
 
   describe "#find" do
     it "should find a dog in the database and return it as a dog object" do
-      row_hash = {"id" => 1, "name" => "Spot", "color" => "Gray"}
-      expect(Dog.find(1)).to eq(row_hash)
+      expect(Dog.find(1).id).to eq(1)
+    end
+
+    it "should find a dog in the database and return it as a dog object" do
+      expect(Dog.find(1).name).to eq("Spot")
+    end
+
+    it "should find a dog in the database and return it as a dog object" do
+      expect(Dog.find(1).color).to eq("Gray")
     end
   end
 
