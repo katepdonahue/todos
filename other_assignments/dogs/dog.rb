@@ -53,7 +53,7 @@ class Dog
   end
 
   def delete
-
+    self.db.query("DELETE FROM dogs WHERE id = #{self.id};")
   end
  
 end
