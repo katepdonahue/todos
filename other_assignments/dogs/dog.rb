@@ -16,7 +16,7 @@ class Dog
   end
 
   def self.find(id)
-
+    db.query("SELECT * FROM dogs WHERE dogs.id = #{id};")
   end
 
   def db
@@ -30,7 +30,7 @@ class Dog
 end
  
 dog1 = Dog.new("Spot", "Gray") 
-dog2 = Dog.find(10)
+dog2 = Dog.find(1)
 debugger
 puts 'hi'
  
