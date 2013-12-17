@@ -67,7 +67,7 @@ class Dog
   end
 
   def ==(other_dog)
-
+    self.id == other_dog.id
   end
  
 end
