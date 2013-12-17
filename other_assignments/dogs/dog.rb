@@ -88,6 +88,11 @@ class Dog
   end
 
   def attributes
+    if saved?
+      "Name: #{self.name}  Color: #{self.color}  ID: #{self.id}"
+    else
+      "Name: #{self.name}  Color: #{self.color}  ID: none"
+    end
   end
  
 end
