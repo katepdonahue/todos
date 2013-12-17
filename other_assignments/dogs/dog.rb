@@ -59,6 +59,7 @@ class Dog
   end
 
   def saved?
+    self.id
   end
 
   def save!
