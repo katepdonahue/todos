@@ -57,7 +57,17 @@ describe Dog do
   end
 
   describe "#find_by_color" do
+    it "should find a dog in the database and return it as a dog object" do
+      expect(Dog.find_by_color("Gray").id).to eq(1)
+    end
 
+    it "should find a dog in the database and return it as a dog object" do
+      expect(Dog.find_by_color("Gray").name).to eq("Pie")
+    end
+
+    it "should find a dog in the database and return it as a dog object" do
+      expect(Dog.find_by_color("Gray").color).to eq("Gray")
+    end
   end
 
 
