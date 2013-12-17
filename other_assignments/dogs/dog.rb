@@ -25,15 +25,17 @@ class Dog
 
   def self.find(id)
     dog_row = self.db.query("SELECT * FROM dogs WHERE dogs.id = #{id};").first
-    dog_obj = Dog.new(dog_row["name"], dog_row["color"])
-    dog_obj.id = id
-    dog_obj
+    row_to_obj(dog_row)
   end
 
   def self.find_by_name(name)
     dog_row = self.db.query("SELECT * FROM dogs WHERE dogs.name = '#{name}';").first
-    dog_obj = Dog.new(dog_row["name"], dog_row["color"])
-    dog_obj.id = dog_row["id"]
+    row_to_obj(dog_row)
+  end
+
+  def self.row_to_obj(row)
+    dog_obj = Dog.new(row["name"], row["color"])
+    dog_obj.id = row["id"]
     dog_obj
   end
 
