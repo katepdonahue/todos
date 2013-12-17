@@ -23,6 +23,12 @@ class Dog
     self.db.query("UPDATE dogs SET name = '#{self.name}', color = '#{self.color}' WHERE id = #{self.id};")
   end
 
+  def self.row_to_obj(row)
+    dog_obj = Dog.new(row["name"], row["color"])
+    dog_obj.id = row["id"]
+    dog_obj
+  end
+
   def self.find(id)
     dog_row = self.db.query("SELECT * FROM dogs WHERE dogs.id = #{id};").first
     row_to_obj(dog_row)
@@ -33,13 +39,9 @@ class Dog
     row_to_obj(dog_row)
   end
 
-  def self.row_to_obj(row)
-    dog_obj = Dog.new(row["name"], row["color"])
-    dog_obj.id = row["id"]
-    dog_obj
-  end
-
   def self.find_by_color(color)
+    dog_row = self.db.query("SELECT * FROM dogs WHERE dogs.color = '#{color}';").first
+    row_to_obj(dog_row)
   end
 
   def db
