@@ -65,17 +65,14 @@ class Dog
   def save!
     saved? ? update : insert
   end
+
+  def ==(other_dog)
+
+  end
  
 end
  
  
-  # color, name, id
-  # db
-  # find_by_att
-  # find
-  # insert
-  # update
-  # delete/destroy
  
   # refactorings?
   # new_from_db
