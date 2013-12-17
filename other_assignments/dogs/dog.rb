@@ -80,7 +80,11 @@ class Dog
   end
 
   def inspect
-    
+    if saved?
+      "Woof! My name is #{self.name}. Pet my shiny #{self.color} coat! Please! My id is #{self.id}."
+    else
+      "Woof! My name is #{self.name}. Pet my shiny #{self.color} coat! Please! I'm not in the database yet!"
+    end
   end
  
 end
