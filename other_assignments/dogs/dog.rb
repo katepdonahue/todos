@@ -4,6 +4,7 @@
 # color TEXT);
 
 require 'mysql2'
+require 'debugger'
  
 class Dog
   attr_accessor :name, :color, :id
@@ -14,13 +15,22 @@ class Dog
     @color = color
   end
 
-  def find
+  def self.find(id)
 
+  end
+
+  def db
+    @@db
+  end
+
+  def self.db
+    @@db
   end
  
 end
  
-dog = Dog.find(10)
+dog1 = Dog.new("Spot", "Gray") 
+dog2 = Dog.find(10)
 debugger
 puts 'hi'
  
