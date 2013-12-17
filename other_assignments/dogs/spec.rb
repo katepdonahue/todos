@@ -11,8 +11,7 @@ describe Dog do
   
   describe "#insert" do
     it "should insert a dog object into the database" do
-      dog1 = Dog.new("Spot", "Gray")
-      dog1.insert
+      dog1 = Dog.new("Spot", "Gray").insert
       sql_command = "SELECT * FROM dogs WHERE name = '#{dog1.name}';"
       row_hash = {"id" => 1, "name" => "Spot", "color" => "Gray"}
       expect(Dog.db.query(sql_command).first).to eq(row_hash)

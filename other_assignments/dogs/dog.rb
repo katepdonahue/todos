@@ -101,7 +101,3 @@ class Dog
 end
  
  
- 
-  # new_from_db
-  # reload
-  # attributes
