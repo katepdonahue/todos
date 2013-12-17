@@ -1,5 +1,12 @@
 require './dog'
 
+Dog.db.query("DROP TABLE dogs")
+Dog.db.query("CREATE TABLE dogs
+(id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+name TEXT,
+color TEXT);")
+
+
 describe Dog do
   
   describe "#insert" do
@@ -36,7 +43,17 @@ describe Dog do
   end
 
   describe "#find_by_name" do
+    # it "should find a dog in the database and return it as a dog object" do
+    #   expect(Dog.find_by_name("Pie").id).to eq(1)
+    # end
 
+    # it "should find a dog in the database and return it as a dog object" do
+    #   expect(Dog.find_by_name("Pie").name).to eq("Pie")
+    # end
+
+    # it "should find a dog in the database and return it as a dog object" do
+    #   expect(Dog.find_by_name("Pie").color).to eq("Gray")
+    # end
   end
 
   describe "#find_by_color" do
