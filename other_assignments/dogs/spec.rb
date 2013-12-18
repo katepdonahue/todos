@@ -42,29 +42,16 @@ describe Dog do
   end
 
   describe "#find_by_name" do
-    dog1 = Dog.new("Canada", "Gray").insert
-    dog2 = Dog.new("Canada", "Orange").insert
-    it "should find an array of dog objects with the name" do
-      expect(Dog.find_by_name("Canada")[0].id).to eq(dog1.id)
+    it "should find a dog in the database and return it as a dog object" do
+      expect(Dog.find_by_name("Pie").id).to eq(1)
     end
 
-    it "should find an array of dog objects with the name" do
-      expect(Dog.find_by_name("Canada")[0].name).to eq("Canada")
+    it "should find a dog in the database and return it as a dog object" do
+      expect(Dog.find_by_name("Pie").name).to eq("Pie")
     end
 
-    it "should find an array of dog objects with the name" do
-      expect(Dog.find_by_name("Canada")[0].color).to eq("Gray")
-    end
-    it "should find an array of dog objects with the name" do
-      expect(Dog.find_by_name("Canada")[1].id).to eq(dog2.id)
-    end
-
-    it "should find an array of dog objects with the name" do
-      expect(Dog.find_by_name("Canada")[1].name).to eq("Canada")
-    end
-
-    it "should find an array of dog objects with the name" do
-      expect(Dog.find_by_name("Canada")[1].color).to eq("Orange")
+    it "should find a dog in the database and return it as a dog object" do
+      expect(Dog.find_by_name("Pie").color).to eq("Gray")
     end
   end
 
@@ -146,12 +133,12 @@ describe Dog do
     end
   end
 
-  describe "#inspect" do
-    it "should return the dog's attributes" do
+  describe "#attributes" do
+    it "should return the dog's attributes with an id if they have one" do
       dog1 = Dog.new("Salad", "Black").insert
       expect(dog1.attributes).to eq("Name: Salad  Color: Black  ID: #{dog1.id}")
     end
-    it "should return our own string instead of ruby's built in inspect method" do
+    it "should return the dog's attributes without an id if they don't have one" do
       dog1 = Dog.new("Salad", "Black")
       expect(dog1.attributes).to eq("Name: Salad  Color: Black  ID: none")
     end
@@ -163,3 +150,30 @@ describe Dog do
     end
   end
 end
+
+# describe "#find_by_name" do
+#     dog1 = Dog.new("Canada", "Gray").insert
+#     dog2 = Dog.new("Canada", "Orange").insert
+#     it "should find an array of dog objects with the name" do
+#       expect(Dog.find_by_name("Canada")[0].id).to eq(dog1.id)
+#     end
+
+#     it "should find an array of dog objects with the name" do
+#       expect(Dog.find_by_name("Canada")[0].name).to eq("Canada")
+#     end
+
+#     it "should find an array of dog objects with the name" do
+#       expect(Dog.find_by_name("Canada")[0].color).to eq("Gray")
+#     end
+#     it "should find an array of dog objects with the name" do
+#       expect(Dog.find_by_name("Canada")[1].id).to eq(dog2.id)
+#     end
+
+#     it "should find an array of dog objects with the name" do
+#       expect(Dog.find_by_name("Canada")[1].name).to eq("Canada")
+#     end
+
+#     it "should find an array of dog objects with the name" do
+#       expect(Dog.find_by_name("Canada")[1].color).to eq("Orange")
+#     end
+#   end
