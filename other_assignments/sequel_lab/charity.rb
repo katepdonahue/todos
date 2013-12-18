@@ -1,4 +1,4 @@
 require 'sequel'
 
-class Cat < Sequel::Model
+class Charity < Sequel::Model
 end

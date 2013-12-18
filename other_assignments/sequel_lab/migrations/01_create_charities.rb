@@ -1,7 +1,7 @@
 Sequel.migration do
-  create do
+  change do
     create_table(:charities) do
-      primary key :id
+      primary_key :id
       String :name
       String :cause
       Integer :funding_goal
