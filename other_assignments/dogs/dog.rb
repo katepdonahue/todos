@@ -105,7 +105,7 @@ class Dog
   end
 
   def reload
-
+    dog = Dog.find(self.id)
   end
  
 end
