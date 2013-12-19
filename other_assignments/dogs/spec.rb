@@ -46,41 +46,54 @@ describe Dog do
   describe "#find_by_name" do
     dog1 = Dog.new("Canada", "Gray").insert
     dog2 = Dog.new("Canada", "Orange").insert
-    it "should find an array of dog objects with the name" do
+    it "should find an array of dog objects with the same name" do
       expect(Dog.find_by_name("Canada")[0].id).to eq(dog1.id)
     end
 
-    it "should find an array of dog objects with the name" do
+    it "should find an array of dog objects with the same name" do
       expect(Dog.find_by_name("Canada")[0].name).to eq("Canada")
     end
 
-    it "should find an array of dog objects with the name" do
+    it "should find an array of dog objects with the same name" do
       expect(Dog.find_by_name("Canada")[0].color).to eq("Gray")
     end
-    it "should find an array of dog objects with the name" do
+    it "should find an array of dog objects with the same name" do
       expect(Dog.find_by_name("Canada")[1].id).to eq(dog2.id)
     end
 
-    it "should find an array of dog objects with the name" do
+    it "should find an array of dog objects with the same name" do
       expect(Dog.find_by_name("Canada")[1].name).to eq("Canada")
     end
 
-    it "should find an array of dog objects with the name" do
+    it "should find an array of dog objects with the same name" do
       expect(Dog.find_by_name("Canada")[1].color).to eq("Orange")
     end
   end
 
   describe "#find_by_color" do
-    it "should find a dog in the database and return it as a dog object" do
-      expect(Dog.find_by_color("Gray").id).to eq(1)
+    dog1 = Dog.new("Fruit Bowl", "Maroon").insert
+    dog2 = Dog.new("David", "Maroon").insert
+    it "should find an array of dog objects with the same color" do
+      expect(Dog.find_by_color("Maroon")[0].id).to eq(dog1.id)
     end
 
-    it "should find a dog in the database and return it as a dog object" do
-      expect(Dog.find_by_color("Gray").name).to eq("Pie")
+    it "should find an array of dog objects with the same color" do
+      expect(Dog.find_by_color("Maroon")[0].name).to eq("Fruit Bowl")
     end
 
-    it "should find a dog in the database and return it as a dog object" do
-      expect(Dog.find_by_color("Gray").color).to eq("Gray")
+    it "should find an array of dog objects with the same color" do
+      expect(Dog.find_by_color("Maroon")[0].color).to eq("Maroon")
+    end
+    it "should find an array of dog objects with the same color" do
+      expect(Dog.find_by_color("Maroon")[1].id).to eq(dog2.id)
+    end
+
+    it "should find an array of dog objects with the same color" do
+      expect(Dog.find_by_color("Maroon")[1].name).to eq("David")
+    end
+
+    it "should find an array of dog objects with the same color" do
+      expect(Dog.find_by_color("Maroon")[1].color).to eq("Maroon")
     end
   end
 
@@ -165,17 +178,14 @@ describe Dog do
 end
 
 
-
-# describe "#find_by_name" do
-#     it "should find a dog in the database and return it as a dog object" do
-#       expect(Dog.find_by_name("Pie").id).to eq(1)
+# it "should find a dog in the database and return it as a dog object" do
+#       expect(Dog.find_by_color("Gray").id).to eq(1)
 #     end
 
 #     it "should find a dog in the database and return it as a dog object" do
-#       expect(Dog.find_by_name("Pie").name).to eq("Pie")
+#       expect(Dog.find_by_color("Gray").name).to eq("Pie")
 #     end
 
 #     it "should find a dog in the database and return it as a dog object" do
-#       expect(Dog.find_by_name("Pie").color).to eq("Gray")
+#       expect(Dog.find_by_color("Gray").color).to eq("Gray")
 #     end
-#   end
