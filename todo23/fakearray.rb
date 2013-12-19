@@ -15,7 +15,7 @@ class FakeArray
   end
  
   def first
-    
+    elt1
   end
  
   def []()
