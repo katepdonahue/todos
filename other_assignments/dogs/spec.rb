@@ -107,18 +107,16 @@ describe Dog do
   describe "#save!" do
     it "should insert a dog object into the database if it's not already there" do
       dog1 = Dog.new("Curly", "Brown").save!
-      dog2 = Dog.find_by_name("Curly")
-      sql_command = "SELECT * FROM dogs WHERE id = '#{dog2.id}';"
-      row_hash = {"id" => dog2.id, "name" => "Curly", "color" => "Brown"}
+      sql_command = "SELECT * FROM dogs WHERE id = #{dog1.id};"
+      row_hash = {"id" => dog1.id, "name" => "Curly", "color" => "Brown"}
       expect(Dog.db.query(sql_command).first).to eq(row_hash)
     end
     it "should update a dog object in the database if it is already there" do
       dog1 = Dog.new("Unicorn", "Blue").insert
       dog1.color = "Pink"
       dog1.save!
-      dog2 = Dog.find_by_name("Unicorn")
-      sql_command = "SELECT * FROM dogs WHERE id = '#{dog2.id}';"
-      row_hash = {"id" => dog2.id, "name" => "Unicorn", "color" => "Pink"}
+      sql_command = "SELECT * FROM dogs WHERE id = #{dog1.id};"
+      row_hash = {"id" => dog1.id, "name" => "Unicorn", "color" => "Pink"}
       expect(Dog.db.query(sql_command).first).to eq(row_hash)
     end
   end

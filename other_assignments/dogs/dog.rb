@@ -24,7 +24,7 @@ class Dog
   end
 
   def mark_saved!
-    self.id = self.db.last_id
+    self.id = self.db.last_id if db.last_id > 0
     self
   end
 
