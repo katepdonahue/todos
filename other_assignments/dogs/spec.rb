@@ -175,17 +175,13 @@ describe Dog do
       expect(Dog.start_over.first).to be_nil
     end
   end
+
+  describe "#reload" do
+    it "should update the dog object to reverse all changes made to it since it was pulled from the database" do
+      dog1 = Dog.new("Kate", "Stripes").save!
+      dog1.name = "Jorge"
+      expect(dog1.reload.name).to eq("Kate")
+    end
+  end
 end
 
-
-# it "should find a dog in the database and return it as a dog object" do
-#       expect(Dog.find_by_color("Gray").id).to eq(1)
-#     end
-
-#     it "should find a dog in the database and return it as a dog object" do
-#       expect(Dog.find_by_color("Gray").name).to eq("Pie")
-#     end
-
-#     it "should find a dog in the database and return it as a dog object" do
-#       expect(Dog.find_by_color("Gray").color).to eq("Gray")
-#     end

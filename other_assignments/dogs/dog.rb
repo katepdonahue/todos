@@ -103,12 +103,11 @@ class Dog
     color TEXT);")
     db.query("SELECT * FROM dogs")
   end
+
+  def reload
+
+  end
  
 end
  
-
-  # def self.find_by_name(name)
-  #   dog_row = self.db.query("SELECT * FROM dogs WHERE dogs.name = '#{name}';").first
-  #   row_to_obj(dog_row)
-  # end
  
