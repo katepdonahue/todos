@@ -18,3 +18,16 @@
 # end
  
 # Note: I've intentionally omitted a step here where you'd have to somehow tell your class that were using an array of 1,2,3
+
+require './fakearray'
+
+describe FakeArray do
+
+  describe "#[]" do
+    it "should create a new FakeArray object" do
+      container = []
+      expect(container.class).to eq(FakeArray)
+    end
+  end
+
+end
