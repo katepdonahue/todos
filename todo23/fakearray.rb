@@ -18,7 +18,7 @@ class FakeArray
     elt1
   end
  
-  def []()
+  def [](index)
 
   end
  

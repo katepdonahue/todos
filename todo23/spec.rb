@@ -45,4 +45,11 @@ describe FakeArray do
     end
   end
 
+  describe "#[](i)" do
+    it "should return the ith element" do
+      fakearray = FakeArray.new(1, 2, 3)
+      expect(fakearray.[](2)).to eq(3)
+    end
+  end
+
 end
