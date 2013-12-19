@@ -23,10 +23,18 @@ require './fakearray'
 
 describe FakeArray do
 
-  describe "#[]" do
-    it "should create a new FakeArray object" do
-      container = []
-      expect(container.class).to eq(FakeArray)
+  describe "#each" do
+    it "should behave like each on Array class" do
+      container1 = []
+      [1,2,3].each do |element|
+        container1 << element + 1
+      end
+      fakearray = FakeArray.new(1, 2, 3)
+      container2 = []
+      fakearray.each do |element|
+        container2 << element + 1
+      end
+      expect(container2).to eq(container1)
     end
   end
 

@@ -1,5 +1,9 @@
  
 class FakeArray
+
+  def initialize
+
+  end
  
   def each
     
@@ -10,7 +14,7 @@ class FakeArray
   end
  
   def []()
-    
+
   end
  
 end
