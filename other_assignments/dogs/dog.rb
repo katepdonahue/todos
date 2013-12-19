@@ -50,8 +50,10 @@ class Dog
   end
 
   def self.find_by_name(name)
-    dog_row = self.db.query("SELECT * FROM dogs WHERE dogs.name = '#{name}';").first
-    row_to_obj(dog_row)
+    results = []
+    self.db.query("SELECT * FROM dogs WHERE dogs.name = '#{name}';").each do |dog_row|
+      results << row_to_obj(dog_row)
+    end
   end
 
   def self.find_by_color(color)
@@ -101,10 +103,8 @@ class Dog
 end
  
 
- # def self.find_by_name(name)
- #    results = []
- #    self.db.query("SELECT * FROM dogs WHERE dogs.name = '#{name}';").each do |dog_row|
- #      results << row_to_obj(dog_row)
- #    end
- #  end
+  # def self.find_by_name(name)
+  #   dog_row = self.db.query("SELECT * FROM dogs WHERE dogs.name = '#{name}';").first
+  #   row_to_obj(dog_row)
+  # end
  
