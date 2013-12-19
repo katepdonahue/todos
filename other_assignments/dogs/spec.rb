@@ -144,9 +144,9 @@ describe Dog do
     end
   end
 
-  describe "#reload" do
+  describe "#start_over" do
     it "should empty the dogs table" do
-      expect(Dog.reload.first).to be_nil
+      expect(Dog.start_over.first).to be_nil
     end
   end
 end

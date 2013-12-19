@@ -89,7 +89,7 @@ class Dog
     saved? ? string += "ID: #{self.id}" : string += "ID: none"
   end
 
-  def self.reload
+  def self.start_over
     db.query("DROP TABLE dogs")
     db.query("CREATE TABLE dogs
     (id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
