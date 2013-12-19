@@ -19,7 +19,13 @@ class FakeArray
   end
  
   def [](index)
-
+    if index == 0
+      elt1
+    elsif index == 1
+      elt2
+    elsif index == 2
+      elt3
+    end
   end
  
 end
