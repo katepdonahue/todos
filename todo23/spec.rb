@@ -38,4 +38,11 @@ describe FakeArray do
     end
   end
 
+  describe "#first" do
+    it "should return the first element" do
+      fakearray = FakeArray.new(1, 2, 3)
+      expect(fakearray.first).to eq(1)
+    end
+  end
+
 end
