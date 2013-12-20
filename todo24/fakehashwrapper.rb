@@ -15,11 +15,7 @@ class FakeHash
 
   def a_values
     a = []
-    hash.each do |k, v|
-      if k[0] == "a"
-        a << v
-      end
-    end
+    hash.each {|k, v| a << v if k[0] == "a"}
     a
   end
 
