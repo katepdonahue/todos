@@ -20,7 +20,7 @@ class FakeHash
   end
 
   def keys_ztoa
-
+    hash.keys.sort.reverse
   end
  
 end
