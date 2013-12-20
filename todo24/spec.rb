@@ -34,14 +34,18 @@ describe FakeHash do
     end
   end
 
-  describe "#keys" do
-    fake = FakeHash.new({:greeting => "Aloha", :farewell => "Aloha"})
-    expect(fake.keys).to eq([:greeting, :farewell])
+  describe "#a_values" do
+    it "should return an array of values with keys beginning with a" do
+      fake = FakeHash.new({:greeting => "Aloha", :afternoon => "Hey",  :farewell => "Aloha", :and => "Bye"})
+      expect(fake.a_values).to eq(["Hey", "Bye"])
+    end
   end
 
   describe "#keys_ztoa" do
-    fake = FakeHash.new({:greeting => "Aloha", :afternoon => "Hey", :farewell => "Aloha"})
-    expect(fake.keys_ztoa).to eq([:greeting, :farewell, :afternoon])
+    it "should return an array of keys sorted z to a" do
+      fake = FakeHash.new({:greeting => "Aloha", :afternoon => "Hey", :farewell => "Aloha"})
+      expect(fake.keys_ztoa).to eq([:greeting, :farewell, :afternoon])
+    end
   end
 
 end

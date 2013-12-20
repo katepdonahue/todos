@@ -12,7 +12,7 @@ class FakeHash
 
  end
 
- def keys
+ def a_values
 
  end
 
