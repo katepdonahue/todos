@@ -10,3 +10,25 @@
 # I'd like to be able to set values in our fake hash.
 # I'd like to be able to find all values that have keys beginning with the letter a.
 # I'd like to be able to get all the keys in the hash in a descending alphabetized array.
+
+require "./fakehashwrapper"
+
+describe FakeHash do
+  
+  describe "#[]()" do
+
+  end
+
+  describe "#[]()=" do
+
+  end
+
+  describe "#keys" do
+
+  end
+
+  describe "#keys_array" do
+
+  end
+
+end
