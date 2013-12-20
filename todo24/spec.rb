@@ -27,7 +27,11 @@ describe FakeHash do
   end
 
   describe "#[]=" do
-
+    it "should set the value" do
+      fake = FakeHash.new({})
+      fake[:name] = "Kate"
+      expect(fake[:name]).to eq("Kate")
+    end
   end
 
   describe "#keys" do

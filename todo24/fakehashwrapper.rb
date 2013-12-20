@@ -8,7 +8,7 @@ class FakeHash
 
  end
 
- def []= (key, value)
+ def []=(key, value)
 
  end
 
