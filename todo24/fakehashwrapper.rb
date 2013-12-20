@@ -14,7 +14,13 @@ class FakeHash
   end
 
   def a_values
-
+    a = []
+    hash.each do |k, v|
+      if k.to_s[0] == "a"
+        a << v
+      end
+    end
+    a
   end
 
   def keys_ztoa
