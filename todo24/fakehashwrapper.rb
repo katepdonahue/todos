@@ -1,24 +1,24 @@
 class FakeHash
   attr_accessor :hash
  
- def initialize(hash)
-  @hash = hash
- end
+  def initialize(hash)
+    @hash = hash
+  end
 
- def [](key)
-  hash[key]
- end
+  def [](key)
+    hash[key]
+  end
 
- def []=(key, value)
+  def []=(key, value)
+    hash[key] = value
+  end
 
- end
+  def a_values
 
- def a_values
+  end
 
- end
+  def keys_ztoa
 
- def keys_ztoa
-
- end
+  end
  
 end
