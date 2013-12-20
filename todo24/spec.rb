@@ -35,7 +35,8 @@ describe FakeHash do
   end
 
   describe "#keys" do
-
+    fake = FakeHash.new({:greeting => "Aloha", :farewell => "Aloha"})
+    expect(fake.keys).to eq([:greeting, :farewell])
   end
 
   describe "#keys_array" do
