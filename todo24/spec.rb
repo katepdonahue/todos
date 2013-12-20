@@ -15,11 +15,18 @@ require "./fakehashwrapper"
 
 describe FakeHash do
   
-  describe "#[]()" do
-
+  describe "#[]" do
+    it "should return the value of a key if the key is a string" do
+      fake = FakeHash.new({"greeting" => "hello"})
+      expect(fake["greeting"]).to eq("hello")
+    end
+    it "should return the value of a key if the key is a symbol" do
+      fake = FakeHash.new({:greeting => "hello"})
+      expect(fake[:greeting]).to eq("hello")
+    end
   end
 
-  describe "#[]()=" do
+  describe "#[]=" do
 
   end
 

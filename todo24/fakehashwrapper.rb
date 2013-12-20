@@ -2,14 +2,13 @@ class FakeHash
  
  def initialize(hash)
   @hash = hash
-
  end
 
  def [](key)
 
  end
 
- def [](key)= (value)
+ def []= (key, value)
 
  end
 
