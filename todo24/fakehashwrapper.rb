@@ -16,7 +16,7 @@ class FakeHash
 
  end
 
- def keys_array
+ def keys_ztoa
 
  end
  
