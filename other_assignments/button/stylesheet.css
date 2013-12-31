@@ -13,6 +13,7 @@
 
 */
 a {
+	/*button*/
 	display: block;
 	margin: 20px;
 	width: 150px;
@@ -21,9 +22,13 @@ a {
 	background-color: gray;
 	border: black 1px solid;
 	box-shadow: 0 5px 3px #888888;
+	/*text*/
 	color: black;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
+	font-family: Arial;
+	font-size: 1.5em;
+	font-weight: bold;
 	text-shadow: 0 1px white;
 }
