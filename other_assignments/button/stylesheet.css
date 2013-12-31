@@ -16,19 +16,27 @@ a {
 	/*button*/
 	display: block;
 	margin: 20px 15px;
-	width: 150px;
+	width: 155px;
 	padding: 25px 55px;
 	background-color: lightgray;
 	border: gray 2px solid;
 	border-radius: 20px;
-	box-shadow: 0 5px 3px lightgray;
+	box-shadow: 0 4px 3px lightgray;
 	/*text*/
 	color: gray;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-family: Arial;
+	font-family: Arial Unicode MS;
 	font-size: 1.5em;
 	font-weight: bold;
 	text-shadow: 0 1px white;
+}
+
+a:after { 
+	content: '\2605';
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
 }
