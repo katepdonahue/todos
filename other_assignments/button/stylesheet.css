@@ -18,9 +18,9 @@ a {
 	margin: 20px 15px;
 	width: 150px;
 	padding: 25px 55px;
-	border-radius: 10px;
 	background-color: lightgray;
-	border: black 2px solid;
+	border: gray 2px solid;
+	border-radius: 20px;
 	box-shadow: 0 5px 3px lightgray;
 	/*text*/
 	color: gray;
