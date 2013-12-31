@@ -19,11 +19,11 @@ a {
 	width: 150px;
 	padding: 30px;
 	border-radius: 10px;
-	background-color: gray;
-	border: black 1px solid;
-	box-shadow: 0 5px 3px #888888;
+	background-color: lightgray;
+	border: black 2px solid;
+	box-shadow: 0 5px 3px lightgray;
 	/*text*/
-	color: black;
+	color: gray;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
