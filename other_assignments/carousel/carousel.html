@@ -9,24 +9,29 @@
 	<body>
 		<nav class="navbar navbar-inverse navbar-static-top">
 			<div class="navbar-inner">
-				<a href="#" class="brand">Project Name</a>
-				<ul class="nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown<b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">more info</a></li>
-							<li><a href="#">other stuff</a></li>
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">menu</a>
+					<a href="#" class="brand">Project Name</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Contact</a></li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">more info</a></li>
+									<li><a href="#">other stuff</a></li>
+								</ul>
+							</li>
 						</ul>
-					</li>
-				</ul>
+					</div>
+				</div>
 			</div>
 		</nav>
-		<section id="myCarousel" class="carousel">
+		<section id="myCarousel" class="carousel slide">
 			<div class="carousel-inner">
-				<div class="item">
+				<div class="active item">
 					<img src="http://placekitten.com/700/400">
 					<div class="carousel-caption">
 						<h3>A Header.</h3>
@@ -36,15 +41,15 @@
 						consequat. Duis aute irure dolor in reprehenderit in voluptate vedivt esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt moldivt anim id est laborum.</p>
-						<button>Learn More</button>
+						<button class="btn">Learn More</button>
 					</div>
 				</div>
-				<div class="active item">
+				<div class="item">
 					<img src="http://placekitten.com/g/700/400">
 					<div class="carousel-caption">
 						<h3>Hey there!</h3>
 						<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin divterature from 45 BC, making it over 2000 years old.</p>
-						<button>Click me.</button>
+						<button class="btn">Click me.</button>
 					</div>
 				</div>
 				<div class="item">
@@ -52,7 +57,7 @@
 					<div class="carousel-caption">
 						<h3>Oh heeeeey!</h3>
 						<p>Richard McCdivntock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical divterature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum".</p>
-						<button>What?</button>
+						<button class="btn">What?</button>
 					</div>
 				</div>
 			</div>
@@ -60,7 +65,7 @@
 			<a href="#myCarousel" class="carousel-control right" data-slide="next"></a>
 		</section>
 		<section class="row">
-			<article>
+			<article class="span4">
 				<div class="circle">
 					<p>140x140</p>
 				</div>
@@ -75,7 +80,7 @@
 					<button>View details</button>
 				</div>
 			</article>
-			<article>
+			<article class="span4">
 				<div class="circle">
 					<p>140x140</p>
 				</div>
@@ -90,7 +95,7 @@
 					<button>View details</button>
 				</div>
 			</article>
-			<article>
+			<article class="span4">
 				<div class="circle">
 					<p>140x140</p>
 				</div>
