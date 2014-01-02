@@ -3,3 +3,7 @@
 	height: 140px;
 	border-radius: 140px;
 }
+
+.thumbnail {
+	border: none;
+}
