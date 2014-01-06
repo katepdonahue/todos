@@ -3,7 +3,7 @@
  
 # Code:
 def even_sum(arr)
-  arr.each_with_object([]) { |elt, new_array| new_array << elt }
+  arr.each_with_object([]) { |elt, new_array| new_array << elt.reverse }
 end
  
 # even_sum(["cat", "dog", "bird", "fish"]) #=> ["drib", "hsif"]
