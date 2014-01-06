@@ -3,7 +3,7 @@
  
 # Code:
 def even_sum(arr)
-  arr.each_with_object___
+  # arr.each_with_object___
 end
  
 # even_sum(["cat", "dog", "bird", "fish"]) #=> ["drib", "hsif"]
