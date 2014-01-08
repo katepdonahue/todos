@@ -10,7 +10,7 @@ class String
         palindromes << section.reverse if section == section.reverse
       end
     end
-    palindromes.sort_by { |palindrome| palindrome.length }.last
+    palindromes.max_by { |palindrome| palindrome.length }
   end
 
 end
