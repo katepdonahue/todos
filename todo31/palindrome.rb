@@ -1,5 +1,8 @@
  
-def longest_palindrome
-  
+class String
+
+  def longest_palindrome
+
+  end
 end
  
