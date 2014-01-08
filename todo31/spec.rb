@@ -3,12 +3,9 @@
 
 require './palindrome'
 
-describe String do
-
-  describe "#longest_palindrome" do
-    it "should return the longest palindrome in a given string" do
-      string1 = "afbbbfjdjklgdfdhfdkjfffhhfffjkdfhdhkyejejfjkd"
-      expect(string1.longest_palindrome).to eq("dhfdkjfffhhfffjkdfhd")
-    end
+describe String "#longest_palindrome" do
+  it "should return the longest palindrome in a given string" do
+    string1 = "afbbbfjdjklgdfdhfdkjfffhhfffjkdfhdhkyejejfjkd"
+    expect(string1.longest_palindrome).to eq("dhfdkjfffhhfffjkdfhd")
   end
 end
