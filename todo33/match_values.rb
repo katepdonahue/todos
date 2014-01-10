@@ -1,12 +1,10 @@
 
 class Hash
+
   def keys_of(*args)
     array = []
-    self.each do |key, val|
-      if args.include? val
-        array << key
-      end
-    end
+    self.each { |key, val| array << key if args.include? val }
     array.uniq
   end
+  
 end
