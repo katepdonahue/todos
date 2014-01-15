@@ -5,6 +5,7 @@ class Array
     self.each do |array|
       outer_array << array[0]
     end
+    outer_array
   end
 
 end
