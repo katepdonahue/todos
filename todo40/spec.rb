@@ -20,4 +20,8 @@ describe "#separate_with_comma" do
     expect(separate_with_comma(1000000)).to eq("1,000,000")
   end
 
+  it "should add a coma in the right spot 1,000,000,000" do
+    expect(separate_with_comma(1000000000)).to eq("1,000,000,000")
+  end
+
 end

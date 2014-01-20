@@ -1,5 +1,5 @@
 def separate_with_comma(n)
-  num = n/3.to_i
+  num = (n.to_s.size)/3
   num.times do
     n = n.to_s.gsub(/(?<=\d)(?=\d\d\d(\z|,))/, ",")
   end
