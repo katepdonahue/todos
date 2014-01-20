@@ -1,3 +1,3 @@
 def separate_with_comma(n)
-  #code goes here
+  n.to_s
 end
