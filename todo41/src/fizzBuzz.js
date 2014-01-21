@@ -1,5 +1,5 @@
 function fizzBuzz(num) {
-  for (var i=1; i<(num+1); i++) {
+  for (var i=1; i<=num; i++) {
     if (i%15 === 0) {
       console.log("FizzBuzz");
     }
