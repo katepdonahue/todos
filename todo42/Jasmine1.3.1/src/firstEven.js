@@ -1,0 +1,2 @@
+function firstEven(array) {
+}
