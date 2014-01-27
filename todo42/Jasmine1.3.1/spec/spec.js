@@ -9,7 +9,7 @@ describe( "#firstEven", function() {
   it("should return the first even when there is more than one even", function() {
     expect(firstEven([3, 5, 6, 7, 2])).toBe(6);
   }); 
-  it("should return nil when there are no evens", function() {
-    expect([3, 5, 7]).toBe(nil);
+  it("should return undefined when there are no evens", function() {
+    expect(firstEven[3, 5, 7]).toBe(undefined);
   }); 
 });
